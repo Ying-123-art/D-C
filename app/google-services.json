@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "970805274221",
+    "firebase_url": "https://giuaky-ae5ef-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "giuaky-ae5ef",
+    "storage_bucket": "giuaky-ae5ef.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970805274221:android:ac3193c709d608e938c164",
+        "android_client_info": {
+          "package_name": "com.example.giuaky"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl4I5xxNLMPm_ieXM1JPibe0UDzcQcXaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

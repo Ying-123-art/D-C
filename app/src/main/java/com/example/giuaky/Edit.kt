@@ -72,10 +72,10 @@ fun EditScreen(postId: String, onBackToHome: () -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Edit Post") },
+                title = { Text("Chỉnh sửa bài đăng") },
                 navigationIcon = {
                     IconButton(onClick = onBackToHome) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Quay lại")
                     }
                 }
             )
@@ -100,7 +100,7 @@ fun EditScreen(postId: String, onBackToHome: () -> Unit) {
                 OutlinedTextField(
                     value = title,
                     onValueChange = { title = it },
-                    label = { Text("Title") },
+                    label = { Text("Tiêu đề") },
                     modifier = Modifier.fillMaxWidth(),
                     enabled = !isUploading,
                     singleLine = true
@@ -111,7 +111,7 @@ fun EditScreen(postId: String, onBackToHome: () -> Unit) {
                 OutlinedTextField(
                     value = content,
                     onValueChange = { content = it },
-                    label = { Text("Content") },
+                    label = { Text("Nội dung") },
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(150.dp),
@@ -138,7 +138,7 @@ fun EditScreen(postId: String, onBackToHome: () -> Unit) {
                     modifier = Modifier.fillMaxWidth(),
                     enabled = !isUploading
                 ) {
-                    Text("Change Image")
+                    Text("Thay đổi ảnh")
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -156,9 +156,9 @@ fun EditScreen(postId: String, onBackToHome: () -> Unit) {
                             }
                         },
                         modifier = Modifier.fillMaxWidth(),
-                        enabled = title.isNotEmpty() && content.isNotEmpty()
+                        enabled = title.isNotEmpty() || content.isNotEmpty()
                     ) {
-                        Text("Update Post")
+                        Text("Cập nhật bài đăng")
                     }
 
                     Spacer(modifier = Modifier.height(8.dp))
@@ -172,7 +172,7 @@ fun EditScreen(postId: String, onBackToHome: () -> Unit) {
                         colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.error),
                         enabled = !isUploading
                     ) {
-                        Text("Delete Post")
+                        Text("Xóa bài đăng")
                     }
                 }
             }
